@@ -1,0 +1,8 @@
+{
+  "name": "solar-system-express",
+  "version": "1.0.0",
+  "description": "An Express solar system explorer",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "ejs": "^3.1.10", "express": "^4.21.2" }
+}

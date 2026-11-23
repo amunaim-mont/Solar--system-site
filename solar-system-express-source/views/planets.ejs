@@ -1,0 +1,4 @@
+<%- include('partials/header', { title: 'Planets' }) %>
+<section class="page-intro"><p class="eyebrow">02 — THE PLANETARY INDEX</p><h1>Eight worlds,<br><em>one system.</em></h1><p>Choose a planet to inspect its vital statistics, environment, and place in the solar system.</p></section>
+<section class="planet-grid"><% planets.forEach((planet) => { %><a class="planet-card" href="/planet/<%= planet.slug %>" style="--planet-color: <%= planet.color %>"><div class="card-number"><%= planet.order %></div><div class="planet-thumb"><img src="<%= planet.image %>" alt="<%= planet.name %>" loading="lazy"></div><div class="card-info"><div><p class="eyebrow"><%= planet.type %></p><h2><%= planet.name %></h2></div><span class="arrow">↗</span></div><p class="card-stat"><%= planet.distanceFromSun %> from Sun <span>·</span> <%= planet.moons %> <%= planet.moons === 1 ? 'moon' : 'moons' %></p></a><% }) %></section>
+<%- include('partials/footer') %>
